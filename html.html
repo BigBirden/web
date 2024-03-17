@@ -1,38 +1,65 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="style.css">
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<div class="container">
-<h1>Registration form</h1>
-<form>
-    <div class="form-input">
-        <label for="name-input">Enter your name</label>
-        <input type="text" id="name-input" placeholder="Name"/>
-    </div>
-    <div class="form-input">
-        <label for="password-input">Enter your password</label>
-        <input type="password" id="password-input" placeholder="Password"/>
-    </div>
-    <div class="form-input">
-        <label for="user-type-input">Select user type</label>
-        <select id="user-type-input">
-            <option value="Admin">Admin</option>
-            <option value="Moderator">Moderator</option>
-            <option value="User">User</option>
-        </select>
-    </div>
-    <div>
-        <input type="checkbox" id="remember-input"/>
-        <label for="remember-input">Remember me</label>
-    </div>
-    <input type="submit" value="Submit form"/>
-</form>
-</div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome to DSS</title>
+        <!-- Подключение css файла -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to DotSpector Security Center!</h1>
+            <h3>Please, fill the form to continue.</h3>
+            <!-- Форма ввода -->
+            <form>
+                <div class="form-input" id="name-input-container">
+                    <label for="name-input">Enter your name</label>
+                    <input type="text" id="name-input" placeholder="Name"/>
+                </div>
 
+                <div class="form-input">
+                    <label for="password-input">Enter your password</label>
+                    <input type="password" id="password-input" placeholder="Password"/>
+                </div>
 
-</body>
+                <div class="form-input">
+                    <label for="user-type-input">Select user type</label>
+                    <select id="user-type-input">
+                        <option value="Admin">Admin</option>
+                        <option value="Moderator">Moderator</option>
+                        <option value="User">User</option>
+                    </select>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="remember-input"/>
+                    <label for="remember-input">Remember me</label>
+                </div>
+
+                <input type="submit" value="Submit form"/>
+            </form>
+            <!-- Кнопка для смены темы страницы -->
+            <div class="form-input">
+                <button class="dark-button-theme toBlack">Dark theme</button>
+            </div>
+            <form>
+                <!-- Строка просто для красоты -->
+                <h4>All you need to know about us is that we have the best tools to keep your company safe. We are your shield.</h4>
+            </form>
+        </div>
+
+        <script type="text/javascript">
+            const button = document.querySelector(".dark-button-theme");
+
+            <!-- Обработка события "click" -->
+            button.addEventListener("click", function() {
+                <!-- toggle - меняет при нажатии на тему и обратно -->
+                document.body.classList.toggle("dark-theme");
+                button.classList.toggle("toBlack");
+                <!-- Строка ниже меняет надпись на кнопке -->
+                button.innerText = button.classList.contains("toBlack") ? "Dark theme" : "Light theme";
+            });
+
+        </script>
+    </body>
 </html>
