@@ -1,0 +1,111 @@
+.containerHS {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #2d3e50;
+}
+
+.containerHD {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: antiquewhite;
+}
+.containerHSID {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #2d3e50;
+}
+
+/*Стили для ссылок*/
+.linkStyle{
+    color: #F6F6F6;
+    text-decoration: none;
+    margin: 1rem;
+    position: relative;
+}
+.linkStyleD{
+    color: #1e2225;
+    text-decoration: none;
+    margin: 1rem;
+    position: relative;
+}
+
+/*Стили для блока с текстом*/
+.textBlockS{
+    color: #F6F6F6;
+    text-decoration: none;
+    margin: 20px;
+    position: relative;
+}
+.textBlockD{
+    color: #1e2225;
+    text-decoration: none;
+    margin: 20px;
+    position: relative;
+}
+.textBlockSID{
+    color: #61dafb;
+    text-decoration: none;
+    margin: 20px;
+    position: relative;
+}
+
+/*Стили самого текста в блоке*/
+.textS{
+    color: #2d3e50;
+    text-decoration: none;
+    font-size: 24px;
+    position: relative;
+    margin: 0 auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.textD{
+    color: #1e2225;
+    text-decoration: none;
+    font-size: 24px;
+    position: relative;
+    margin: 0 auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.textSID{
+    color: #2d3e50;
+    text-decoration: none;
+    position: relative;
+    font-size: 24px;
+    margin: 0 auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/*Стили для отступа*/
+.paragraphS{
+    margin: 20px;
+}
+.paragraphD{
+    margin: 20px;
+}
+.paragraphSID{
+    margin: 20px;
+}
