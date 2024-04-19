@@ -1,14 +1,18 @@
-import styles from "./SpectorCardContent.module.css"
+import styles from "./AsteroidCardContent.module.css"
 
-export const SpectorCardContent = () =>{
+export const AsteroidCardContent = (props) =>{
+    const {regularCard, name, date, distance, size, DistanceMode} = props;
+
+    //Среднее расстояние от земли до луны - 385.000 км согласно википедии
     return <div>
-        <div className={styles.contentName}>Первый</div>
+        <div className={styles.contentName}>{name}</div>
         <div className={styles.contentWrapper}>
-            <div className={styles.contentDate}>Дата назначения: 22 апреля 2012 года</div>
+            <div className={styles.contentDate}>{`Дата: ${date}`}</div>
             <div className={styles.contentDistance}>
-                Зарплата: 320000 рублей
+
+                {`Расстояние: ${DistanceMode ? (distance/385000).toFixed(0) : distance} ${DistanceMode ? 'дист.' : 'км'}`}
             </div>
-            <div className={styles.contentSize}>Должность: СеТ</div>
+            <div className={styles.contentSize}>{`Размер: ${size} м`}</div>
         </div>
     </div>
 

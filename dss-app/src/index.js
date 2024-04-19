@@ -4,25 +4,31 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Directors} from "./pages/Directors";
-import {Spectors} from "./pages/Spectors";
-import {Spector} from "./pages/Spector";
+import {Destroyment} from "./pages/Destroyment";
+import {Asteroids} from "./pages/Asteroids";
+import {Asteroid} from "./pages/Asteroid";
 
+//Роутер, который позволяет перемещаться по страницам
 const router = createBrowserRouter([
     {
-        path: "/directors",
-        element: <Directors/>,
+        path: "/",
+        element: <Asteroids/>,
     },
     {
-        path: "/spectors",
-        element: <Spectors/>,
+        path: "/asteroids",
+        element: <Asteroids/>,
     },
     {
-        path: "/spector/:id",
-        element: <Spector/>,
+        path: "/destroyment",
+        element: <Destroyment/>,
+    },
+    {
+        path: "/asteroid/:id",
+        element: <Asteroid/>,
     },
 ]);
 
+//Точка старта сервера
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

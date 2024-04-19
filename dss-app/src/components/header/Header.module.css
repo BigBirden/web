@@ -1,4 +1,4 @@
-.containerHS {
+.containerHA {
     width: 80vw;
     margin: 0 auto;
     display: flex;
@@ -17,7 +17,7 @@
     justify-content: space-between;
     background-color: antiquewhite;
 }
-.containerHSID {
+.containerHAID {
     width: 80vw;
     margin: 0 auto;
     display: flex;
@@ -42,7 +42,7 @@
 }
 
 /*Стили для блока с текстом*/
-.textBlockS{
+.textBlockA{
     color: #F6F6F6;
     text-decoration: none;
     margin: 20px;
@@ -54,7 +54,7 @@
     margin: 20px;
     position: relative;
 }
-.textBlockSID{
+.textBlockAID{
     color: #61dafb;
     text-decoration: none;
     margin: 20px;
@@ -62,7 +62,7 @@
 }
 
 /*Стили самого текста в блоке*/
-.textS{
+.textA{
     color: #2d3e50;
     text-decoration: none;
     font-size: 24px;
@@ -86,7 +86,7 @@
     align-items: flex-start;
     justify-content: space-between;
 }
-.textSID{
+.textAID{
     color: #2d3e50;
     text-decoration: none;
     position: relative;
@@ -100,12 +100,14 @@
 }
 
 /*Стили для отступа*/
-.paragraphS{
+.paragraphA{
     margin: 20px;
 }
 .paragraphD{
     margin: 20px;
 }
-.paragraphSID{
+.paragraphAID{
     margin: 20px;
 }
+
+

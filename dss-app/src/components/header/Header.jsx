@@ -1,49 +1,62 @@
 import {Link} from "react-router-dom";
 import styles from "./Header.module.css";
-import LogoImage from "../../photo/directors.png";
 
-export const HeaderS = () =>{
-    return <div className={styles.containerHS}>
+export const ColoredLine = ({ color }) => {
+    return <div>
+        <hr
+            style={{
+                color: color,
+                backgroundColor: color,
+                height: 3
+            }}
+        />
+    </div>
+};
+
+export const HeaderA = () =>{
+    return <div className={styles.containerHA}>
         <div>
-            <h1 className={styles.textBlockS}>DOT.SPECTOR.SYSTEM</h1>
-            <div className={styles.textBlockS}>Сервис мониторинга и увольнения сотрудников, совершивших множественные нарушения.</div>
+            <h1 className={styles.textBlockA}>ARMAGGEDON V</h1>
+            <div className={styles.textBlockA}>Сервис мониторинга и уничтожения астероидов, опасно подлетающих к
+                Земле.
+            </div>
         </div>
         <h4>
-            <Link to={"/directors"} className={styles.linkStyle}>Режиссёры </Link>
-            <Link to={"/spector/:id"} className={styles.linkStyle}>Спектры по идентификатору</Link>
+            <Link to={"/asteroid/:id"} className={styles.linkStyle}>Астероиды по ID </Link>
+            <Link to={"/destroyment"} className={styles.linkStyle}>Уничтожение</Link>
         </h4>
     </div>
 }
 export const HeaderD = () =>{
     return <div className={styles.containerHD}>
         <div>
-            <h1 className={styles.textBlockD}>DOT.SPECTOR.SYSTEM</h1>
-            <div className={styles.textBlockD}>Сервис мониторинга и увольнения сотрудников, совершивших множественные нарушения.</div>
+            <h1 className={styles.textBlockD}>ARMAGGEDON V</h1>
+            <div className={styles.textBlockD}>Сервис мониторинга и уничтожения астероидов, опасно подлетающих к Земле.</div>
         </div>
         <h4>
-            <Link to={"/spectors"} className={styles.linkStyleD}>Спектры </Link>
-            <Link to={"/spector/:id"} className={styles.linkStyleD}>Спектры по идентификатору</Link>
+            <Link to={"/asteroids"} className={styles.linkStyleD}>Астероиды </Link>
+            <Link to={"/asteroid/:id"} className={styles.linkStyleD}>Астероиды по ID</Link>
         </h4>
     </div>
 }
 
-export const HeaderSID = () =>{
-    return <div className={styles.containerHSID}>
+export const HeaderAID = () =>{
+    return <div className={styles.containerHAID}>
         <div>
-            <h1 className={styles.textBlockSID}>DOT.SPECTOR.SYSTEM</h1>
-            <div className={styles.textBlockSID}>Сервис мониторинга и увольнения сотрудников, совершивших множественные нарушения.</div>
+            <h1 className={styles.textBlockAID}>ARMAGGEDON V</h1>
+            <div className={styles.textBlockAID}>Сервис мониторинга и уничтожения астероидов, опасно подлетающих к Земле.</div>
         </div>
         <h4>
-            <Link to={"/directors"} className={styles.linkStyle}>Режиссёры </Link>
-            <Link to={"/spectors"} className={styles.linkStyle}>Спектры</Link>
+            <Link to={"/asteroids"} className={styles.linkStyle}>Астероиды </Link>
+            <Link to={"/destroyment"} className={styles.linkStyle}>Уничтожение</Link>
         </h4>
     </div>
 }
 
-export const TextBlockS = () =>{
-    return <div className={styles.textS}>
-        <div className={styles.paragraphS}>Spectors page</div>
-        <div className={styles.paragraphS}>Coming soon...</div>
+export const TextBlockA = () =>{
+    return <div className={styles.textA}>
+        <div className={styles.paragraphA}>Spectors page</div>
+        <div className={styles.paragraphA}>Coming soon...</div>
     </div>
 }
 
@@ -53,9 +66,9 @@ export const TextBlockD = () => {
         <div className={styles.paragraphD}>Coming soon...</div>
     </div>
 }
-export const TextBlockSID = () => {
-    return <div className={styles.textSID}>
-        <div className={styles.paragraphSID}>DotSpector :id page</div>
-        <div className={styles.paragraphSID}>Coming soon...</div>
+export const TextBlockAID = () => {
+    return <div className={styles.textAID}>
+        <div className={styles.paragraphAID}>{'DotSpector ${id} page'}</div>
+        <div className={styles.paragraphAID}>Coming soon...</div>
     </div>
 }

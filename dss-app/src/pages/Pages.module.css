@@ -1,3 +1,22 @@
+/*Лабораторная 8*/
+.showDangerousOnly{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.distanceMode{
+    width: 25em;
+    max-width: 100%;
+    min-height: 2em;
+    margin-left: auto;
+    margin-right: 0;
+
+}
+
+.distanceChooser{
+margin-left: 15px;
+}
+
+/*Предыдущие работы*/
 .container {
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 24px;
@@ -10,7 +29,7 @@
     justify-content: space-between;
 }
 
-/*Контейнер для страницы с режиссёрами*/
+/*Контейнер для страницы с уничтожением*/
 .containerD {
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 24px;
@@ -31,4 +50,11 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+}
+
+.rectangle {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: black;
 }
