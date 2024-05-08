@@ -15,7 +15,17 @@ export const Asteroids = () => {
     }
 
     //Для заполнения информации об астероидах
-    const [asteroids, setAsteroids] = useState([])
+    const [asteroids, setAsteroids] = useState<{
+        name: string;
+        date: string;
+        distance: {
+            kilometers: number;
+            lunar: number;
+        },
+        size: number;
+        isDangerous: boolean;
+        id: string;
+    }[]>([])
 
     //Для вывода только опасных астероидов
     const[onlyDangerous, setOnlyDangerous] = useState(false)
@@ -33,7 +43,7 @@ export const Asteroids = () => {
                 for (const data in response.near_earth_objects) {
                     rawAsteroids = rawAsteroids.concat(response.near_earth_objects[data])
                 }
-                const asteroids = rawAsteroids.map(item=>{
+                const asteroids  = rawAsteroids.map(item=>{
                     const size = Math.trunc((item.estimated_diameter.meters.estimated_diameter_max + item.estimated_diameter.meters.estimated_diameter_min)/2);
                     const close = item.close_approach_data[0]
 
@@ -60,12 +70,12 @@ export const Asteroids = () => {
     return <div>
         Home
         <div className={styles.showDangerousOnly}>
-            <input type="checkbox" value ={onlyDangerous} onChange={()=>setOnlyDangerous(!onlyDangerous)}>
+            <input type="checkbox" value ={onlyDangerous as unknown as string} onChange={()=>setOnlyDangerous(!onlyDangerous)}>
         </input> Показать только опасные </div>
         <div className={styles.distanceMode}>
-            Расстояние <button className={styles.distanceChooser} value ={isKM} onClick={()=>setKM(isKM = false)}> в километрах
+            Расстояние <button className={styles.distanceChooser} value ={isKM as unknown as string} onClick={()=>setKM(isKM = false)}> в километрах
         </button>,
-            <button className={styles.distanceChooser} value ={isKM} onClick={()=>setKM(isKM = true)}> в дистанциях до луны</button>
+            <button className={styles.distanceChooser} value ={isKM as unknown as string} onClick={()=>setKM(isKM = true)}> в дистанциях до луны</button>
         </div>
 
 
