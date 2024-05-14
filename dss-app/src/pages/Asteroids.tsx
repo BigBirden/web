@@ -1,7 +1,9 @@
-//import {HeaderA, TextBlockA, ColoredLine} from "../components/header/Header";
+import {HeaderA, ColoredLine} from "../components/header/Header";
 import styles from './Pages.module.css'
 import { Card } from '../components/card/Card'
-import { useEffect, useState } from 'react'
+import {useContext, useEffect, useState} from 'react'
+import {AsteroidsContext} from "../components/asteroids-context/AsteroidsContext";
+
 
 export const Asteroids = () => {
     //Модуль для составления ссылки и вставки АПИ-ключа, скрытого в .еnv файле
@@ -28,10 +30,6 @@ export const Asteroids = () => {
         }[]
     >([])
 
-    //Для вывода только опасных астероидов
-    const [onlyDangerous, setOnlyDangerous] = useState(false)
-    //КМ - в километрах, для установки значений
-    let [isKM, setKM] = useState(false)
 
     //Effect в реакте - всё, что используется извне приложения(например, данные)
     useEffect(() => {
@@ -81,11 +79,15 @@ export const Asteroids = () => {
         }
     }, [])
 
+    let {onlyDangerous,setOnlyDangerous, isKM, setKM} = useContext(AsteroidsContext)
+
     //fetch() возвращает promise на информацию об астероидах
     //Тернарный оператор сначала определяет Единицы измерения, затем флажок Опасности. Как сделать по-другому - я так и не понял
     return (
         <div>
-            Home
+            <HeaderA/>
+
+            <ColoredLine color="black" />
             <div className={styles.showDangerousOnly}>
                 <input
                     type="checkbox"
@@ -114,47 +116,10 @@ export const Asteroids = () => {
                     в дистанциях до луны
                 </button>
             </div>
-            {isKM
-                ? onlyDangerous
-                    ? asteroids
-                          .filter((item) => item.isDangerous)
-                          .map((item) => (
-                              <Card
-                                  key={item.id}
-                                  name={item.name}
-                                  date={item.date}
-                                  size={item.size}
-                                  distance={item.distance}
-                                  isDangerous={item.isDangerous}
-                                  DistanceMode={true}
-                              />
-                          ))
-                    : asteroids.map((item) => (
-                          <Card
-                              key={item.id}
-                              name={item.name}
-                              date={item.date}
-                              size={item.size}
-                              distance={item.distance}
-                              isDangerous={item.isDangerous}
-                              DistanceMode={true}
-                          />
-                      ))
-                : onlyDangerous
-                  ? asteroids
-                        .filter((item) => item.isDangerous)
-                        .map((item) => (
-                            <Card
-                                key={item.id}
-                                name={item.name}
-                                date={item.date}
-                                size={item.size}
-                                distance={item.distance}
-                                isDangerous={item.isDangerous}
-                                DistanceMode={false}
-                            />
-                        ))
-                  : asteroids.map((item) => (
+            {onlyDangerous
+                ? asteroids
+                    .filter((item) => item.isDangerous)
+                    .map((item) => (
                         <Card
                             key={item.id}
                             name={item.name}
@@ -162,9 +127,18 @@ export const Asteroids = () => {
                             size={item.size}
                             distance={item.distance}
                             isDangerous={item.isDangerous}
-                            DistanceMode={false}
                         />
-                    ))}
+                    ))
+                : asteroids.map((item) => (
+                    <Card
+                        key={item.id}
+                        name={item.name}
+                        date={item.date}
+                        size={item.size}
+                        distance={item.distance}
+                        isDangerous={item.isDangerous}
+                    />
+                ))}
         </div>
     )
 }
