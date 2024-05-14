@@ -1,19 +1,17 @@
-import {HeaderD, TextBlockD, ColoredLine} from "../components/header/Header";
+import {HeaderD, ColoredLine} from "../components/header/Header";
 import {useContext} from "react";
-import styles from "./Pages.module.css";
 import {AsteroidsContext} from "../components/asteroids-context/AsteroidsContext";
+import {Card} from "../components/card/Card";
 
 export const Destroyment = () => {
-    const ContextValue = useContext(AsteroidsContext)
-
-    console.log(">>>>>>>>", ContextValue);
-
+    const {destroyment} = useContext(AsteroidsContext);
 
     return <div>
         <HeaderD/>
 
         <ColoredLine color="black" />
 
-        <TextBlockD/>
+        {destroyment.map(item=><Card key={item.id} {...item}/>)}
+
     </div>
 }

@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2fa78a0-69b3-49b6-be2c-b6cb2234ef10" name="Changes" comment="installed ESLint and Prettier">
-      <change afterPath="$PROJECT_DIR$/dss-app/src/components/asteroids-context/AsteroidsContext.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dss-app/src/components/card/CardContent/AsteroidCardContentContainer.tsx" afterDir="false" />
+    <list default="true" id="e2fa78a0-69b3-49b6-be2c-b6cb2234ef10" name="Changes" comment="Context Added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dss-app/Globals.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dss-app/Globals.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dss-app/src/components/asteroids-context/AsteroidsContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dss-app/src/components/asteroids-context/AsteroidsContext.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dss-app/src/components/card/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dss-app/src/components/card/Card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dss-app/src/components/card/CardContent/AsteroidCardContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dss-app/src/components/card/CardContent/AsteroidCardContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dss-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dss-app/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dss-app/src/pages/Asteroids.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dss-app/src/pages/Asteroids.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dss-app/src/components/card/CardAction/AsteroidCardAction.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dss-app/src/components/card/CardAction/AsteroidCardAction.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dss-app/src/pages/Destroyment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dss-app/src/pages/Destroyment.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dss-app/src/pages/Pages.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/dss-app/src/pages/Pages.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +215,7 @@
       <workItem from="1715182279280" duration="2348000" />
       <workItem from="1715184676752" duration="4741000" />
       <workItem from="1715669148009" duration="1171000" />
-      <workItem from="1715697999669" duration="7044000" />
+      <workItem from="1715697999669" duration="12076000" />
     </task>
     <task id="LOCAL-00001" summary="Some pages for DSS and DDS">
       <option name="closed" value="true" />
@@ -286,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715698285243</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Context Added">
+      <option name="closed" value="true" />
+      <created>1715707318729</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715707318729</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +347,7 @@
     <MESSAGE value="Some pages for DSS and DDS" />
     <MESSAGE value="Ast.jsx" />
     <MESSAGE value="installed ESLint and Prettier" />
-    <option name="LAST_COMMIT_MESSAGE" value="installed ESLint and Prettier" />
+    <MESSAGE value="Context Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Context Added" />
   </component>
 </project>
