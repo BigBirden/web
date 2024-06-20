@@ -1,6 +1,10 @@
 import styles from "./Action.module.css"
 
-export const AsteroidCardAction = ({isDangerous}) =>{
+type AsteroidCardActionProps = {
+    isDangerous: boolean;
+}
+
+export const AsteroidCardAction = ({isDangerous}:AsteroidCardActionProps) =>{
     return (<div>
         <div className={styles.actionGrade}>{`Оценка: ${isDangerous ? 'опасен' : 'не опасен'}`}</div>
         <button className={styles.action}>

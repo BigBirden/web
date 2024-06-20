@@ -1,7 +1,18 @@
 import styles from "./AsteroidCardContent.module.css"
 
-export const AsteroidCardContent = (props) =>{
-    const {regularCard, name, date, distance, size, DistanceMode} = props;
+type AsteroidCardContentProps = {
+    name: string;
+    date: string;
+    distance: {
+        kilometers: number;
+        lunar: number;
+    },
+    size: number;
+    DistanceMode: boolean;
+}
+
+export const AsteroidCardContent = (props:AsteroidCardContentProps) =>{
+    const {name, date, distance, size, DistanceMode} = props;
 
     //Среднее расстояние от земли до луны - 385.000 км согласно википедии
     return <div>
